@@ -3,6 +3,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/academia?useTimezone=true&serverTimezone=UTC&useLegacyDate
     username: postgres
+    password: 41494899
   jpa:
     show-sql: true
     hibernate:

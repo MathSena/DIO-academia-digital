@@ -17,12 +17,12 @@ public class MatriculaController {
     private MatriculaServiceImpl service;
 
     @PostMapping
-    public Matricula create(@Valid @RequestBody MatriculaForm form){
+    public Matricula create(@Valid @RequestBody MatriculaForm form) {
         return service.create(form);
     }
 
     @GetMapping
-    public List<Matricula> getAll(){
-        return service.getAll();
+    public List<Matricula> getAll(@RequestParam(value = "bairro", required = false) String bairro) {
+        return service.getAll(bairro);
     }
 }
